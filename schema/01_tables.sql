@@ -1,16 +1,16 @@
 CREATE TABLE customers (
     customer_id     NUMBER GENERATED ALWAYS AS IDENTITY,
-    customer_type   VARCHAR2(1),    
-    national_id     VARCHAR2(11),    
-    tax_number      VARCHAR2(10),    
-    first_name      VARCHAR2(50),
-    last_name       VARCHAR2(50),
-    company_name    VARCHAR2(150),
+    customer_type   VARCHAR2(1 CHAR),
+    national_id     VARCHAR2(11 CHAR),
+    tax_number      VARCHAR2(10 CHAR),
+    first_name      VARCHAR2(50 CHAR),
+    last_name       VARCHAR2(50 CHAR),
+    company_name    VARCHAR2(150 CHAR),
     birth_date      DATE,
-    email           VARCHAR2(150),
-    phone           VARCHAR2(20),
-    city            VARCHAR2(50),
-    status          VARCHAR2(10)  DEFAULT 'ACTIVE',
+    email           VARCHAR2(150 CHAR),
+    phone           VARCHAR2(20 CHAR),
+    city            VARCHAR2(50 CHAR),
+    status          VARCHAR2(10 CHAR)  DEFAULT 'ACTIVE',
     created_at      TIMESTAMP     DEFAULT SYSTIMESTAMP
 );
 
@@ -26,7 +26,7 @@ CREATE TABLE products(
   product_name VARCHAR2(100 CHAR),
   branch VARCHAR2(12 CHAR),
   min_premium NUMBER(12,2),
-  is_active CHAR(1) DEFAULT 'Y',
+  is_active CHAR(1 CHAR) DEFAULT 'Y',
   created_at TIMESTAMP DEFAULT SYSTIMESTAMP
 );
 

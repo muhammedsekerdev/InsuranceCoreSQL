@@ -38,6 +38,7 @@ ALTER TABLE customers ADD CONSTRAINT ck_customers_identity CHECK (
 );
 
 ALTER TABLE products ADD CONSTRAINT pk_product_id PRIMARY KEY(product_id);
+ALTER TABLE products ADD CONSTRAINT uq_products_code UNIQUE(product_code);
 ALTER TABLE products MODIFY(
   product_code NOT NULL,
   product_name NOT NULL,
